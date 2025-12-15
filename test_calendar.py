@@ -13,7 +13,7 @@ def create_calendar_event():
         # --- Login ---
         page.goto("https://app.grabdocs.com/login")
         page.locator("#username").fill("chrism4321")
-        page.locator("#password").fill("Ham38277")
+        page.locator("#password").fill("####")
         page.locator("text=Sign in").click()
 
         # --- 2FA Step (manual) ---

@@ -45,9 +45,6 @@ def create_calendar_event():
         # Close browser
         browser.close()
 
-# --- Delete Event (Cleanup) ---
-# NOTE: This step is best-effort and may require UI-specific selectors
-
         # --- Delete Event (Cleanup) ---
 # NOTE: This step is best-effort and may require UI-specific selectors
 

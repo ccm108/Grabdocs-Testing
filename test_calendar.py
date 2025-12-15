@@ -45,6 +45,30 @@ def create_calendar_event():
         # Close browser
         browser.close()
 
+# --- Delete Event (Cleanup) ---
+# NOTE: This step is best-effort and may require UI-specific selectors
+
+        # --- Delete Event (Cleanup) ---
+# NOTE: This step is best-effort and may require UI-specific selectors
+
+    try:
+        # Click the event on the calendar
+        page.wait_for_selector("text=GrabDocs Project Presentation", timeout=10000)
+        page.locator("text=GrabDocs Project Presentation").click()
+    
+        # Open event options / menu
+        page.wait_for_selector("text=Delete", timeout=5000)
+        page.locator("text=Delete").click()
+    
+        # Confirm deletion
+        page.wait_for_selector("text=Confirm", timeout=5000)
+        page.locator("text=Confirm").click()
+    
+        print("Event deleted successfully.")
+    
+    except Exception as e:
+        print("Delete event step skipped or failed (non-blocking):", e)
+
 def test_calendar_event():
     create_calendar_event()
 
